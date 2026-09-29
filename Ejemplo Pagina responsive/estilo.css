@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  font-family: 'Brasika', Arial, sans-serif;
+}
+
+nav {
+  background-color: #f1f0ec;
+  color: rgba(218, 13, 13, 0.89);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+}
+
+.contiene-imagen{
+      width: 100px;
+      height: 100px;
+}
+
+.menu-icon {
+  font-size: 24px;
+  cursor: pointer;
+  display: none; /* Ocultar el botón del menú por defecto */
+}
+  
+.menu {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+}
+  
+.menu li {
+  margin-right: 20px;
+}
+  
+.menu li a {
+  text-decoration: none;
+  color: rgba(218, 13, 13, 0.89);
+  font-size: 20px;
+}
+
+@font-face {
+  font-family: 'Brasika';
+  src: url('imagenes/brasika-display-trial.otf') format('opentype'); /*Chat*/
+}
+  
+.content {
+  padding: 50px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+}
+
+.fila1, .fila2 {
+  display: flex;
+  justify-content: center; 
+  gap: 100px;
+  width: 100%;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-left: 40px;
+  font-size: 0.8em;
+}
+
+.info img {
+  /*height: auto;*/
+  width: 300px;
+  height: 300px;  
+}
+
+#menu-toggle {
+  display: none; /* Mostrar menú cuando la casilla de verificación está marcada */
+}
+  
+  /* Estilos para pantallas pequeñas (menos de 600px de ancho) */
+@media screen and (max-width: 600px) {
+  nav {
+      flex-direction: column; /* Cambiar la dirección del flexbox */
+      align-items: flex-start; /* Alinear los elementos al principio */
+
+  }
+
+  .menu {
+    display: none; /* Ocultar menú en pantallas pequeñas */
+    flex-direction: column; /* Apilar elementos del menú verticalmente */ 
+  }
+  
+  #menu-toggle:checked ~ .menu {
+      display: flex; /* Mostrar menú cuando la casilla de verificación está marcada */
+  }
+
+  /*nav img{
+    float: right;
+  }*/
+
+
+  .menu-icon {
+      display: block; /* Mostrar el botón del menú en pantallas pequeñas */
+  }
+  
+  .contiene-imagen{
+      width: 20%;
+      height: 20%;
+      margin-left: auto; /* esto lo empuja a la derecha */
+      margin-top: -35px;
+  }
+
+  .fila1, .fila2 {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+    /*justify-content: center;
+    gap: 100px;
+    width: 100%;*/
+  }
+
+  .info {
+    margin-left: 0;
+  }
+
+  .info img {
+    width: 200px;
+    height: 200px;
+    
+  }
+
+}
+  
